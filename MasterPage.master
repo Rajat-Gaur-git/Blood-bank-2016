@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            font-size: large;
+        }
+    </style>
+</head>
+<body background="Images/5645665364_0e5a8e23bd_o.jpg">
+    <form id="form1" runat="server">
+    <table border="Groove" class="style1" frame="box">
+        <tr>
+            <td style="font-size: 45pt; font-weight: 700; color: #000000; text-align: center;" 
+                valign="top">
+                BLOOD BANK</td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Menu ID="Menu1" runat="server" Font-Bold="True" Font-Overline="True" 
+                    Font-Strikeout="False" Font-Underline="True" ForeColor="#FFFF99" 
+                    Orientation="Horizontal" RenderingMode="Table" StaticSubMenuIndent="16px" 
+                    Width="100%" style="text-align: center">
+                    <Items>
+                        <asp:MenuItem Text="LOGIN" Value="LOGIN" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="REGISTRATION" Value="REGISTRATION" 
+                            NavigateUrl="~/BuyerReg.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="DONAR LIST" Value="DONAR LIST" 
+                            NavigateUrl="~/DonarList.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="CONTACT US" 
+                            Value="CONTACT US"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td class="style2" 
+                style="font-style: italic; font-weight: 700; color: #FFFF99; text-align: center">
+                This site is developed by rajat.gaur119@gmail.com</td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
